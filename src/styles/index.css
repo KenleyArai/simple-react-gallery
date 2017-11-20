@@ -1,21 +1,3 @@
-* {
-  all: unset;
-}
-
-base,
-basefont,
-datalist,
-head,
-meta,
-script,
-style,
-title,
-noembed,
-param,
-template {
-  display: none;
-}
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
