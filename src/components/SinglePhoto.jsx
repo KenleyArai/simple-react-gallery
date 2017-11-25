@@ -13,7 +13,7 @@ export default class SinglePhoto extends Component {
 
     return (
       <div>
-        <img srcSet={url} />
+        <img srcSet={url + position + ".jpg"} />
       </div>
     );
   }
