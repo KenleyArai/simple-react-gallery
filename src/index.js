@@ -5,5 +5,11 @@ import "./styles/index.css";
 import Gallery from "containers/Gallery";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<Gallery />, document.getElementById("root"));
+var payload = {
+  url:
+    "https://kenley.nyc3.digitaloceanspaces.com/personal-website/desktop/robocar/slideshow/",
+  count: 9
+};
+
+ReactDOM.render(<Gallery {...payload} />, document.getElementById("root"));
 registerServiceWorker();

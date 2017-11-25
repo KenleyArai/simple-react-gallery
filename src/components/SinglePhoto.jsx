@@ -12,6 +12,10 @@ export default class SinglePhoto extends Component {
   render() {
     var { url, position, start, end } = { ...this.props };
 
-    return <div>Test</div>;
+    return (
+      <div>
+        <img srcSet={url} />
+      </div>
+    );
   }
 }
