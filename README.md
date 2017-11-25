@@ -1,5 +1,8 @@
 # Simple React Gallery
 
+The purpose is to have a skeleton reacy gallery component. So the app is as
+minimal as possible.
+
 # Install
 
 ```
