@@ -10,7 +10,7 @@ export default class GalleryImage extends Component {
 
   render() {
     var { url, position, clickHandler } = { ...this.props };
-    console.log(position);
+
     return <img onClick={() => clickHandler(position)} srcSet={url} />;
   }
 }

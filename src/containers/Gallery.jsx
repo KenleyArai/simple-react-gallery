@@ -43,7 +43,12 @@ export default class Gallery extends Component {
       );
     }
     return (
-      <SinglePhoto url={url} position={this.state.position} count={count} />
+      <SinglePhoto
+        clickHandler={this.go_to_all_handler}
+        url={url}
+        position={this.state.position}
+        count={count}
+      />
     );
   }
 
