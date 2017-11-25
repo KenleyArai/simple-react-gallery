@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 export default class BottomBar extends PureComponent {
   static propTypes = {
     url: PropTypes.string.isRequired,
-    start: PropTypes.number.isRequired,
-    stop: PropTypes.number.isRequired,
-    position: PropTypes.isRequired
+    count: PropTypes.number.isRequired,
+    photoHandler: PropTypes.func.isRequired,
+    position: PropTypes.number.isRequired
   };
 
   render() {
-    var { url, start, stop, position } = { ...this.props };
+    var { url, count, photoHandler, position } = { ...this.props };
     return <div />;
   }
 }

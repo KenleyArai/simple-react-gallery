@@ -18,6 +18,7 @@ export default class Gallery extends Component {
 
     this.go_to_all_handler = this.go_to_all_handler.bind(this);
     this.go_to_single_handler = this.go_to_single_handler.bind(this);
+    this.state_helper = this.state_helper.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +45,7 @@ export default class Gallery extends Component {
     }
     return (
       <SinglePhoto
+        photoHandler={this.go_to_single_handler}
         clickHandler={this.go_to_all_handler}
         url={url}
         position={this.state.position}

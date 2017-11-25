@@ -9,17 +9,25 @@ export default class SinglePhoto extends Component {
     url: PropTypes.string.isRequired,
     position: PropTypes.number.isRequired,
     count: PropTypes.number.isRequired,
-    clickHandler: PropTypes.func.isRequired
+    clickHandler: PropTypes.func.isRequired,
+    photoHandler: PropTypes.func.isRequired
   };
 
   render() {
-    var { url, position, count, clickHandler } = { ...this.props };
+    var { url, position, count, clickHandler, photoHandler } = {
+      ...this.props
+    };
 
     return (
       <div>
         <Topbar clickHandler={clickHandler} />
         <img srcSet={url + position + ".jpg"} />
-        <Bottombar />
+        <Bottombar
+          url={url}
+          position={position}
+          count={count}
+          photoHandler={photoHandler}
+        />
       </div>
     );
   }
