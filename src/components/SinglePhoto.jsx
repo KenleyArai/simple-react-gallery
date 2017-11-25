@@ -1,34 +1,36 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-
+import React from "react";
+import styled from "styled-components";
 import Topbar from "components/Topbar";
-import Bottombar from "components/Bottombar";
+import BottomBar from "components/BottomBar";
+import { CSSTransitionGroup } from "react-transition-group";
+import Lazyload from "react-lazyload";
 
-export default class SinglePhoto extends Component {
-  static propTypes = {
-    url: PropTypes.string.isRequired,
-    position: PropTypes.number.isRequired,
-    count: PropTypes.number.isRequired,
-    clickHandler: PropTypes.func.isRequired,
-    photoHandler: PropTypes.func.isRequired
-  };
+const SinglePhotoStyled = styled.img`
+  width: 40rem;
+  height: auto;
+`;
 
-  render() {
-    var { url, position, count, clickHandler, photoHandler } = {
-      ...this.props
-    };
+const SinglePhoto = ({ url, position, count, clickHandler, photoHandler }) => (
+  <div>
+    <Topbar clickHandler={clickHandler} />
+    <Lazyload throttle={500} height={300}>
+      <CSSTransitionGroup
+        transitionName="image-animation"
+        transitionAppear={true}
+        transitionAppearTimeout={250}
+        transitionEnter={false}
+        transitionLeave={false}
+      >
+        <SinglePhotoStyled srcSet={url + position + ".jpg"} />
+      </CSSTransitionGroup>
+    </Lazyload>
+    <BottomBar
+      url={url}
+      position={position}
+      count={count}
+      photoHandler={photoHandler}
+    />
+  </div>
+);
 
-    return (
-      <div>
-        <Topbar clickHandler={clickHandler} />
-        <img srcSet={url + position + ".jpg"} alt="" />
-        <Bottombar
-          url={url}
-          position={position}
-          count={count}
-          photoHandler={photoHandler}
-        />
-      </div>
-    );
-  }
-}
+export default SinglePhoto;

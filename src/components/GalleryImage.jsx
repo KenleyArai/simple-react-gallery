@@ -1,9 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-
+import React from "react";
 import styled from "styled-components";
 
-const GImage = styled.img`
+import { CSSTransitionGroup } from "react-transition-group";
+import Lazyload from "react-lazyload";
+
+import "styles/image.css";
+
+const GalleryImageStyled = styled.img`
   flex: auto;
   height: auto;
   min-width: 10rem;
@@ -24,16 +27,18 @@ const GImage = styled.img`
   }
 `;
 
-export default class GalleryImage extends Component {
-  static propTypes = {
-    url: PropTypes.string.isRequired,
-    position: PropTypes.number.isRequired,
-    clickHandler: PropTypes.func
-  };
+const GalleryImage = ({ url, position, clickHandler }) => (
+  <Lazyload throttle={500} height={300}>
+    <CSSTransitionGroup
+      transitionName="image-animation"
+      transitionAppear={true}
+      transitionAppearTimeout={250}
+      transitionEnter={false}
+      transitionLeave={false}
+    >
+      <GalleryImageStyled srcSet={url} onClick={() => clickHandler(position)} />
+    </CSSTransitionGroup>
+  </Lazyload>
+);
 
-  render() {
-    var { url, position, clickHandler } = { ...this.props };
-
-    return <GImage onClick={() => clickHandler(position)} srcSet={url} />;
-  }
-}
+export default GalleryImage;

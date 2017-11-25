@@ -22,7 +22,7 @@ export default class BottomBar extends PureComponent {
   }
 
   next_helper(count, position, photoHandler) {
-    if (position !== count) {
+    if (count - position > 0) {
       return (
         <BarButton onClick={() => photoHandler(position + 1)}>Next</BarButton>
       );
@@ -35,58 +35,66 @@ export default class BottomBar extends PureComponent {
     // While in the middle
     // At the end
 
-    if (position === 1) {
+    if (position == 1) {
       return (
         <Bar>
+          <BarImg srcSet={url + position + ".jpg"} active alt />
           <BarImg
-            onClick={() => photoHandler(position + 1)}
+            clickHandler={photoHandler}
+            position={position + 1}
             srcSet={url + (position + 1) + ".jpg"}
             alt
           />
           <BarImg
-            onClick={() => photoHandler(position + 2)}
+            clickHandler={photoHandler}
+            position={position + 2}
             srcSet={url + (position + 2) + ".jpg"}
             alt
           />
         </Bar>
       );
-    } else if (count - position === 1) {
+    }
+    if (count - position == 1) {
       return (
         <Bar>
           <BarImg
-            onClick={() => photoHandler(position - 2)}
+            clickHandler={photoHandler}
+            position={position - 2}
             srcSet={url + (position - 2) + ".jpg"}
             alt
           />
           <BarImg
-            onClick={() => photoHandler(position - 1)}
+            clickHandler={photoHandler}
+            position={position - 1}
             srcSet={url + (position - 1) + ".jpg"}
             alt
           />
-        </Bar>
-      );
-    } else {
-      return (
-        <Bar>
-          <BarImg
-            onClick={() => photoHandler(position - 1)}
-            srcSet={url + (position - 1) + ".jpg"}
-            alt
-          />
-          <BarImg srcSet={url + position + ".jpg"} alt active />
-          <BarImg
-            onClick={() => photoHandler(position + 1)}
-            srcSet={url + (position + 1) + ".jpg"}
-            alt
-          />
+          <BarImg srcSet={url + position + ".jpg"} active alt />
         </Bar>
       );
     }
+
+    return (
+      <Bar>
+        <BarImg
+          clickHandler={photoHandler}
+          position={position - 1}
+          srcSet={url + (position - 1) + ".jpg"}
+          alt
+        />
+        <BarImg srcSet={url + position + ".jpg"} alt active />
+        <BarImg
+          clickHandler={photoHandler}
+          position={position + 1}
+          srcSet={url + (position + 1) + ".jpg"}
+          alt
+        />
+      </Bar>
+    );
   }
 
   render() {
     var { url, count, photoHandler, position } = { ...this.props };
-
     return (
       <Bar>
         {this.prev_helper(count, position, photoHandler)}
