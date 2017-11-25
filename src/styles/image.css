@@ -27,6 +27,6 @@
 
 .image-animation-appear.image-animation-appear-active {
   opacity: 1;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.12s cubic-bezier(0.4, 0, 0.2, 1);
 }
