@@ -6,6 +6,14 @@ import uuidv4 from "uuid/v4";
 import GalleryImage from "components/GalleryImage";
 import Bottombar from "components/Bottombar";
 
+import styled from "styled-components";
+
+const Masonry = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -0.25rem; /* Adjustment for the gutter */
+`;
+
 export default class AllPhotos extends PureComponent {
   static propTypes = {
     url: PropTypes.string.isRequired,
@@ -27,7 +35,7 @@ export default class AllPhotos extends PureComponent {
     var urls = this.url_helper(url, count);
 
     return (
-      <div>
+      <Masonry>
         {urls.map(url_t => (
           <GalleryImage
             key={uuidv4()}
@@ -36,7 +44,7 @@ export default class AllPhotos extends PureComponent {
             position={url_t}
           />
         ))}
-      </div>
+      </Masonry>
     );
   }
 }
