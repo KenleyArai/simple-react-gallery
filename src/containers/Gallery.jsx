@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import GalleryImage from "components/GalleryImage";
+import AllPhotos from "components/AllPhotos";
+import SinglePhoto from "components/SinglePhoto";
 
 export default class Gallery extends Component {
   static propTypes = {
@@ -9,19 +10,29 @@ export default class Gallery extends Component {
     count: PropTypes.number.isRequired
   };
 
-  url_helper(url, count) {
-    var urls = [];
-    for (var i = 0; i < count; i++) {
-      urls.push(url + i + ".jpg");
+  constructor(props) {
+    super(props);
+    // Show state toggels between <Allphotos> and <SinglePhtoto>
+    // Position is used only for <SinglePhoto>
+    this.state = { show_state: undefined, position: undefined };
+  }
+
+  componentDidMount() {
+    this.setState({ show_state: "All", position: -1 });
+  }
+
+  state_helper(url, count) {
+    if (this.state.show_state === "All") {
+      return <AllPhotos url={url} count={count} />;
     }
-    return urls;
+    return (
+      <SinglePhoto url={url} position={this.state.position} count={count} />
+    );
   }
 
   render() {
     var { url, count } = { ...this.props };
 
-    var urls = this.url_helper(url, count);
-
-    return <div>{urls.map(url => <GalleryImage url={url} />)}</div>;
+    return this.state_helper(url, count);
   }
 }

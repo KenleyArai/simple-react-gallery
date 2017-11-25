@@ -5,12 +5,11 @@ export default class SinglePhoto extends Component {
   static propTypes = {
     url: PropTypes.string.isRequired,
     position: PropTypes.number.isRequired,
-    start: PropTypes.number.isRequired,
-    end: PropTypes.number.isRequired
+    count: PropTypes.number.isRequired
   };
 
   render() {
-    var { url, position, start, end } = { ...this.props };
+    var { url, position, count } = { ...this.props };
 
     return (
       <div>
