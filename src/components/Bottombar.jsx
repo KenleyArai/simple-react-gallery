@@ -73,7 +73,7 @@ export default class BottomBar extends PureComponent {
             srcSet={url + (position - 1) + ".jpg"}
             alt
           />
-          <BarImg srcSet={url + position + ".jpg"} alt />
+          <BarImg srcSet={url + position + ".jpg"} alt active />
           <BarImg
             onClick={() => photoHandler(position + 1)}
             srcSet={url + (position + 1) + ".jpg"}
