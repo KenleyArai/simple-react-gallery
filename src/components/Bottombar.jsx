@@ -22,7 +22,7 @@ export default class BottomBar extends PureComponent {
   }
 
   next_helper(count, position, photoHandler) {
-    if (position != count) {
+    if (position !== count) {
       return (
         <BarButton onClick={() => photoHandler(position + 1)}>Next</BarButton>
       );
@@ -41,10 +41,12 @@ export default class BottomBar extends PureComponent {
           <BarImg
             onClick={() => photoHandler(position + 1)}
             srcSet={url + (position + 1) + ".jpg"}
+            alt
           />
           <BarImg
             onClick={() => photoHandler(position + 2)}
             srcSet={url + (position + 2) + ".jpg"}
+            alt
           />
         </Bar>
       );
@@ -54,10 +56,12 @@ export default class BottomBar extends PureComponent {
           <BarImg
             onClick={() => photoHandler(position - 2)}
             srcSet={url + (position - 2) + ".jpg"}
+            alt
           />
           <BarImg
             onClick={() => photoHandler(position - 1)}
             srcSet={url + (position - 1) + ".jpg"}
+            alt
           />
         </Bar>
       );
@@ -67,11 +71,13 @@ export default class BottomBar extends PureComponent {
           <BarImg
             onClick={() => photoHandler(position - 1)}
             srcSet={url + (position - 1) + ".jpg"}
+            alt
           />
-          <BarImg srcSet={url + position + ".jpg"} />
+          <BarImg srcSet={url + position + ".jpg"} alt />
           <BarImg
             onClick={() => photoHandler(position + 1)}
             srcSet={url + (position + 1) + ".jpg"}
+            alt
           />
         </Bar>
       );

@@ -21,7 +21,7 @@ export default class SinglePhoto extends Component {
     return (
       <div>
         <Topbar clickHandler={clickHandler} />
-        <img srcSet={url + position + ".jpg"} />
+        <img srcSet={url + position + ".jpg"} alt="" />
         <Bottombar
           url={url}
           position={position}

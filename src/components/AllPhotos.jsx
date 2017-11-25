@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
 
 import GalleryImage from "components/GalleryImage";
-import Bottombar from "components/Bottombar";
 
 import styled from "styled-components";
 
