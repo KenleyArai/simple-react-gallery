@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Card = styled.div``;
 
 const CardPhoto = styled.img`
-  width: 40rem;
+  width: 16rem;
   height: auto;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
