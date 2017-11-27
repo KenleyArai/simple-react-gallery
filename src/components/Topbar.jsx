@@ -3,6 +3,14 @@ import PropTypes from "prop-types";
 import BarButton from "components/BarButton";
 import Bar from "components/Bar";
 
+const TopBarStyled = Bar.extend`
+  align-items: center;
+  padding-left: 4rem;
+  height: 5rem;
+  width: 40rem;
+  justify-content: left;
+`;
+
 export default class Topbar extends Component {
   static propTypes = {
     clickHandler: PropTypes.func.isRequired
@@ -12,9 +20,9 @@ export default class Topbar extends Component {
     var { clickHandler } = { ...this.props };
 
     return (
-      <Bar>
+      <TopBarStyled>
         <BarButton onClick={() => clickHandler()}>Back</BarButton>
-      </Bar>
+      </TopBarStyled>
     );
   }
 }
