@@ -18,8 +18,11 @@ const AlbumContainer = styled.div`
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 
+const AlbumHeader = styled.div``;
+
 export default class Album extends PureComponent {
   static propTypes = {
+    title: PropTypes.string.isRequired,
     gallerys: PropTypes.arrayOf(
       PropTypes.shape({
         url: PropTypes.string.isRequired,
@@ -44,7 +47,11 @@ export default class Album extends PureComponent {
   }
 
   componentDidMount() {
-    this.setState({ state_name: "All", _loaded: true });
+    this.setState({
+      state_name: "All",
+      _loaded: true,
+      title: this.props.title
+    });
   }
 
   backHandler() {
@@ -59,6 +66,7 @@ export default class Album extends PureComponent {
     if (state_name == "All") {
       return (
         <AlbumContainer>
+          <AlbumHeader>{this.state.title}</AlbumHeader>
           {galleries.map(gallery => (
             <AlbumCard
               key={uuidv4()}
@@ -71,6 +79,7 @@ export default class Album extends PureComponent {
     }
     return (
       <AlbumContainer>
+        <AlbumHeader>{this.state.title}</AlbumHeader>
         <Topbar clickHandler={this.backHandler} />
         <Gallery url={this.state.url} count={this.state.count} />
       </AlbumContainer>

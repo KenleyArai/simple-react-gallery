@@ -32,7 +32,7 @@ var wedding_payload = {
 var album_payloads = [robocar_payload, cdc_payload, wedding_payload];
 
 ReactDOM.render(
-  <Album galleries={album_payloads} />,
+  <Album title={"test gallery"} galleries={album_payloads} />,
   document.getElementById("root")
 );
 registerServiceWorker();
