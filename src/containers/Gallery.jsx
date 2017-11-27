@@ -63,10 +63,10 @@ export default class Gallery extends Component {
   render() {
     var { url, count } = { ...this.props };
 
-    return this.state._loaded ? (
-      this.state_helper(url, count)
-    ) : (
-      <span>Loading...</span>
-    );
+    if (this.state._loaded) {
+      return this.state_helper(url, count);
+    }
+
+    return <Loading />;
   }
 }
