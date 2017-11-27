@@ -21,7 +21,15 @@ var cdc_payload = {
   count: 9
 };
 
-var album_payloads = [robocar_payload, cdc_payload];
+var wedding_payload = {
+  title: "Wedding website",
+  desc: "Ruby on rails 5 api",
+  link: "https://lena.kenleyar.ai/",
+  url:
+    "https://kenley.nyc3.digitaloceanspaces.com/personal-website/desktop/cdc/slideshow/1.jpg"
+};
+
+var album_payloads = [robocar_payload, cdc_payload, wedding_payload];
 
 ReactDOM.render(
   <Album galleries={album_payloads} />,
