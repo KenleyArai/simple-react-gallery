@@ -18,7 +18,7 @@ var cdc_payload = {
   desc: "My trip at the cdc",
   url:
     "https://kenley.nyc3.digitaloceanspaces.com/personal-website/desktop/cdc/slideshow/",
-  count: 9
+  count: 10
 };
 
 var wedding_payload = {

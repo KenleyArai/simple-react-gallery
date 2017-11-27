@@ -6,8 +6,7 @@ import { CSSTransitionGroup } from "react-transition-group";
 import Lazyload from "react-lazyload";
 
 const SinglePhotoStyled = styled.img`
-  width: 40rem;
-  height: auto;
+  width: 50vw;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 

@@ -9,7 +9,14 @@ import Loading from "components/Loading";
 
 import uuidv4 from "uuid/v4";
 
-const AlbumContainer = styled.div``;
+const AlbumContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+`;
 
 export default class Album extends PureComponent {
   static propTypes = {
