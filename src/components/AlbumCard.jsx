@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+import Button from "components/Button";
+
 const Card = styled.div``;
 
 const CardPhoto = styled.img`
@@ -14,7 +16,7 @@ const CardTitle = styled.div``;
 
 const CardDesc = styled.div``;
 
-const CardLink = styled.a``;
+const CardButton = Button.extend``;
 
 export default class AlbumCard extends Component {
   static propTypes = {
@@ -22,7 +24,8 @@ export default class AlbumCard extends Component {
     desc: PropTypes.string,
     link: PropTypes.string,
     title: PropTypes.string.isRequired,
-    count: PropTypes.number
+    count: PropTypes.number,
+    clickHandler: PropTypes.func
   };
 
   get_temp_header(url) {
@@ -30,13 +33,19 @@ export default class AlbumCard extends Component {
   }
 
   render() {
-    var { url, desc, link, title, count } = { ...this.props };
-    return (
-      <Card>
-        <CardPhoto srcSet={this.get_temp_header(url)} />
-        <CardTitle>{title}</CardTitle>
-        <CardDesc>{desc}</CardDesc>
-      </Card>
-    );
+    var { url, desc, link, title, count, clickHandler } = { ...this.props };
+
+    if (url) {
+      return (
+        <Card>
+          <CardPhoto srcSet={this.get_temp_header(url)} />
+          <CardTitle>{title}</CardTitle>
+          <CardDesc>{desc}</CardDesc>
+          <CardButton onClick={() => clickHandler(url, count)}>
+            Open Gallery
+          </CardButton>
+        </Card>
+      );
+    }
   }
 }

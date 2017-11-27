@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import AllPhotos from "components/AllPhotos";
 import SinglePhoto from "components/SinglePhoto";
-
+import Loading from "components/Loading";
 import "styles/image.css";
 
 export default class Gallery extends Component {
