@@ -24,7 +24,7 @@ var cdc_payload = {
 var wedding_payload = {
   title: "Wedding website",
   desc: "Ruby on rails 5 api",
-  link: "https://lena.kenleyar.ai/",
+  link: "http://lena.kenleyar.ai/",
   url:
     "https://kenley.nyc3.digitaloceanspaces.com/personal-website/desktop/cdc/slideshow/1.jpg"
 };

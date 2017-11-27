@@ -23,11 +23,12 @@ const CardDesc = styled.div``;
 
 const CardButton = Button.extend``;
 
+const CardLink = styled.a``;
+
 export default class AlbumCard extends Component {
   static propTypes = {
-    url: PropTypes.string,
+    url: PropTypes.string.isRequired,
     desc: PropTypes.string,
-    link: PropTypes.string,
     title: PropTypes.string.isRequired,
     count: PropTypes.number,
     clickHandler: PropTypes.func
@@ -38,9 +39,9 @@ export default class AlbumCard extends Component {
   }
 
   render() {
-    var { url, desc, link, title, count, clickHandler } = { ...this.props };
+    var { url, link, desc, title, count, clickHandler } = { ...this.props };
 
-    if (url) {
+    if (count) {
       return (
         <Card>
           <CardPhoto srcSet={this.get_temp_header(url)} />
@@ -52,5 +53,13 @@ export default class AlbumCard extends Component {
         </Card>
       );
     }
+    return (
+      <Card>
+        <CardPhoto srcSet={url} />
+        <CardTitle>{title}</CardTitle>
+        <CardDesc>{desc}</CardDesc>
+        <CardLink href={link}>Go to Site</CardLink>
+      </Card>
+    );
   }
 }

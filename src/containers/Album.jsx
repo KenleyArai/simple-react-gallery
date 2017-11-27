@@ -21,20 +21,12 @@ const AlbumContainer = styled.div`
 export default class Album extends PureComponent {
   static propTypes = {
     gallerys: PropTypes.arrayOf(
-      PropTypes.oneOf([
-        PropTypes.shape({
-          url: PropTypes.string.isRequired,
-          desc: PropTypes.string.isRequired,
-          title: PropTypes.string.isRequired,
-          count: PropTypes.number.isRequired
-        }),
-        PropTypes.shape({
-          url: PropTypes.string.isRequired,
-          link: PropTypes.string.isRequired,
-          desc: PropTypes.string.isRequired,
-          title: PropTypes.string.isRequired
-        })
-      ])
+      PropTypes.shape({
+        url: PropTypes.string.isRequired,
+        desc: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        count: PropTypes.number
+      })
     )
   };
 
