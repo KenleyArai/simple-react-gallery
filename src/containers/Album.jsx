@@ -5,7 +5,9 @@ export default class Album extends PureComponent {
   static propTypes = {
     gallerys: PropTypes.arrayOf(
       PropTypes.shape({
-        url: PropTypes.string.isRequired,
+        url: PropTypes.string,
+        desc: PropTypes.string,
+        title: PropTypes.string.isRequired,
         count: PropTypes.number.isRequired
       })
     )
