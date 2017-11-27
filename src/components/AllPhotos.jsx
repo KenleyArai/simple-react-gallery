@@ -4,14 +4,7 @@ import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
 
 import GalleryImage from "components/GalleryImage";
-
-import styled from "styled-components";
-
-const Masonry = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  margin-left: -0.25rem;
-`;
+import Masonry from "components/Masonry";
 
 export default class AllPhotos extends PureComponent {
   static propTypes = {
