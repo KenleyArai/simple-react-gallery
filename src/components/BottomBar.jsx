@@ -5,6 +5,18 @@ import Bar from "components/Bar";
 import BarImg from "components/BarImg";
 import BarButton from "components/BarButton";
 
+const ImageBar = Bar.extend`
+  height: 6rem;
+  padding: 0.5rem;
+`;
+
+const BottomBarStyled = Bar.extend`
+  align-items: center;
+  height: 10rem;
+  width: 40rem;
+  justify-content: space-evenly;
+`;
+
 export default class BottomBar extends PureComponent {
   static propTypes = {
     url: PropTypes.string.isRequired,
@@ -19,6 +31,7 @@ export default class BottomBar extends PureComponent {
         <BarButton onClick={() => photoHandler(position - 1)}>Prev</BarButton>
       );
     }
+    return <BarButton />;
   }
 
   next_helper(count, position, photoHandler) {
@@ -27,6 +40,7 @@ export default class BottomBar extends PureComponent {
         <BarButton onClick={() => photoHandler(position + 1)}>Next</BarButton>
       );
     }
+    return <BarButton />;
   }
 
   bar_helper(url, count, position, photoHandler) {
@@ -37,7 +51,7 @@ export default class BottomBar extends PureComponent {
 
     if (position == 1) {
       return (
-        <Bar>
+        <ImageBar>
           <BarImg srcSet={url + position + ".jpg"} active alt />
           <BarImg
             clickHandler={photoHandler}
@@ -51,12 +65,12 @@ export default class BottomBar extends PureComponent {
             srcSet={url + (position + 2) + ".jpg"}
             alt
           />
-        </Bar>
+        </ImageBar>
       );
     }
     if (count - position == 1) {
       return (
-        <Bar>
+        <ImageBar>
           <BarImg
             clickHandler={photoHandler}
             position={position - 2}
@@ -70,12 +84,12 @@ export default class BottomBar extends PureComponent {
             alt
           />
           <BarImg srcSet={url + position + ".jpg"} active alt />
-        </Bar>
+        </ImageBar>
       );
     }
 
     return (
-      <Bar>
+      <ImageBar>
         <BarImg
           clickHandler={photoHandler}
           position={position - 1}
@@ -89,18 +103,18 @@ export default class BottomBar extends PureComponent {
           srcSet={url + (position + 1) + ".jpg"}
           alt
         />
-      </Bar>
+      </ImageBar>
     );
   }
 
   render() {
     var { url, count, photoHandler, position } = { ...this.props };
     return (
-      <Bar>
+      <BottomBarStyled>
         {this.prev_helper(count, position, photoHandler)}
         {this.bar_helper(url, count, position, photoHandler)}
         {this.next_helper(count, position, photoHandler)}
-      </Bar>
+      </BottomBarStyled>
     );
   }
 }

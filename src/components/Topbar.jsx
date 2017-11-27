@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import GalleryButton from "components/GalleryButton";
+import BarButton from "components/BarButton";
+import Bar from "components/Bar";
 
 export default class Topbar extends Component {
   static propTypes = {
@@ -11,9 +12,9 @@ export default class Topbar extends Component {
     var { clickHandler } = { ...this.props };
 
     return (
-      <div>
-        <GalleryButton clickHandler={clickHandler} text={"Back"} />
-      </div>
+      <Bar>
+        <BarButton onClick={() => clickHandler()}>Back</BarButton>
+      </Bar>
     );
   }
 }

@@ -8,6 +8,7 @@ import Lazyload from "react-lazyload";
 const SinglePhotoStyled = styled.img`
   width: 40rem;
   height: auto;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 
 const SinglePhoto = ({ url, position, count, clickHandler, photoHandler }) => (

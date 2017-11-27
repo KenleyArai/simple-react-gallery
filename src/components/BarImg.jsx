@@ -8,6 +8,7 @@ const BarImgStyled = styled.img`
   height: 5rem;
   border: ${props => (props.active ? "5px solid black" : "0")};
   transition: opacity 0.25s ease-in-out;
+  filter: ${props => (props.active ? "grayscale(0)" : "grayscale(1)")};
 `;
 
 const BarImg = ({ srcSet, clickHandler, active, position }) => (
