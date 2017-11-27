@@ -31,7 +31,7 @@ export default class BottomBar extends PureComponent {
         <BarButton onClick={() => photoHandler(position - 1)}>Prev</BarButton>
       );
     }
-    return <BarButton />;
+    return <BarButton hidden />;
   }
 
   next_helper(count, position, photoHandler) {
@@ -40,7 +40,7 @@ export default class BottomBar extends PureComponent {
         <BarButton onClick={() => photoHandler(position + 1)}>Next</BarButton>
       );
     }
-    return <BarButton />;
+    return <BarButton hidden />;
   }
 
   bar_helper(url, count, position, photoHandler) {
