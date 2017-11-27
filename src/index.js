@@ -23,5 +23,8 @@ var cdc_payload = {
 
 var album_payloads = [robocar_payload, cdc_payload];
 
-ReactDOM.render(<Album {...album_payloads} />, document.getElementById("root"));
+ReactDOM.render(
+  <Album galleries={album_payloads} />,
+  document.getElementById("root")
+);
 registerServiceWorker();
