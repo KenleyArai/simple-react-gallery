@@ -4,7 +4,12 @@ import styled from "styled-components";
 
 import Button from "components/Button";
 
-const Card = styled.div``;
+const Card = styled.div`
+  border-radius: 2px;
+  transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 16rem;
+`;
 
 const CardPhoto = styled.img`
   width: 16rem;

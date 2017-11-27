@@ -7,7 +7,7 @@ const TopBarStyled = Bar.extend`
   align-items: center;
   padding-left: 4rem;
   height: 5rem;
-  width: 40rem;
+  width: 100%;
   justify-content: left;
 `;
 

@@ -8,12 +8,14 @@ import BarButton from "components/BarButton";
 const ImageBar = Bar.extend`
   height: 6rem;
   padding: 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 75%;
 `;
 
 const BottomBarStyled = Bar.extend`
   align-items: center;
   height: 10rem;
-  width: 40rem;
   justify-content: space-evenly;
 `;
 
@@ -68,7 +70,7 @@ export default class BottomBar extends PureComponent {
         </ImageBar>
       );
     }
-    if (count - position == 1) {
+    if (count - position == 0) {
       return (
         <ImageBar>
           <BarImg
