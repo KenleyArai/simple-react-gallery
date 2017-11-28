@@ -3,6 +3,10 @@
 The purpose is to have a skeleton reacy gallery component. So the app is as
 minimal as possible.
 
+# Demo
+
+* [https://kenleyar.ai/projects](https://kenleyar.ai/projects)
+
 # Install
 
 ```
