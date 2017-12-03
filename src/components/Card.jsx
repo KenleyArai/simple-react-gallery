@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Box from "components/Box";
 import LazyImg from "components/LazyImg";
 import Header from "components/Header";
+import Content from "components/Content";
 
 export default class Card extends Component {
   static propTypes = {
@@ -19,6 +20,7 @@ export default class Card extends Component {
       <Box>
         <LazyImg srcSet={url} />
         <Header>{title}</Header>
+        <Content>{desc}</Content>
       </Box>
     );
   }
