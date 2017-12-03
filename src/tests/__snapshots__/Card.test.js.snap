@@ -5,8 +5,8 @@ exports[`Card should render with all props 1`] = `
   theme={
     Object {
       "primary": "#fff",
-      "secondary": "",
-      "tertiary": "",
+      "secondary": "#000",
+      "tertiary": "#444",
     }
   }
 >
@@ -25,8 +25,8 @@ exports[`Card should render without desc prop 1`] = `
   theme={
     Object {
       "primary": "#fff",
-      "secondary": "",
-      "tertiary": "",
+      "secondary": "#000",
+      "tertiary": "#444",
     }
   }
 >
@@ -45,8 +45,8 @@ exports[`Card should render without props 1`] = `
   theme={
     Object {
       "primary": "#fff",
-      "secondary": "",
-      "tertiary": "",
+      "secondary": "#000",
+      "tertiary": "#444",
     }
   }
 >
@@ -63,8 +63,8 @@ exports[`Card should render without title 1`] = `
   theme={
     Object {
       "primary": "#fff",
-      "secondary": "",
-      "tertiary": "",
+      "secondary": "#000",
+      "tertiary": "#444",
     }
   }
 >
