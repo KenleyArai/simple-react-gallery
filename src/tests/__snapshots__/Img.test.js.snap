@@ -2,12 +2,39 @@
 
 exports[`Img should render with src 1`] = `
 <styled.img
-  srcSet="logo-small.svg"
+  src="logo-small.svg"
+  theme={
+    Object {
+      "primary": "",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
 />
 `;
 
-exports[`Img should render without 1`] = `
+exports[`Img should render with srcSet 1`] = `
+<styled.img
+  srcSet="logo-small.svg"
+  theme={
+    Object {
+      "primary": "",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+/>
+`;
+
+exports[`Img should render without src 1`] = `
 <styled.img
   srcSet=""
+  theme={
+    Object {
+      "primary": "",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
 />
 `;

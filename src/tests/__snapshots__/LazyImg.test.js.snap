@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LazyImg should render with src 1`] = `
+<LazyLoad
+  height={300}
+  offset={0}
+  once={false}
+  overflow={false}
+  resize={false}
+  scroll={true}
+  throttle={500}
+  unmountIfInvisible={false}
+>
+  <Img
+    src="logo-small.svg"
+    srcSet=""
+    theme={
+      Object {
+        "primary": "",
+        "secondary": "",
+        "tertiary": "",
+      }
+    }
+  />
+</LazyLoad>
+`;
+
+exports[`LazyImg should render with srcSet 1`] = `
+<LazyLoad
+  height={300}
+  offset={0}
+  once={false}
+  overflow={false}
+  resize={false}
+  scroll={true}
+  throttle={500}
+  unmountIfInvisible={false}
+>
+  <Img
+    src=""
+    srcSet=""
+    theme={
+      Object {
+        "primary": "",
+        "secondary": "",
+        "tertiary": "",
+      }
+    }
+  />
+</LazyLoad>
+`;
+
+exports[`LazyImg should render without src 1`] = `
+<LazyLoad
+  height={300}
+  offset={0}
+  once={false}
+  overflow={false}
+  resize={false}
+  scroll={true}
+  throttle={500}
+  unmountIfInvisible={false}
+>
+  <Img
+    src=""
+    srcSet=""
+    theme={
+      Object {
+        "primary": "",
+        "secondary": "",
+        "tertiary": "",
+      }
+    }
+  />
+</LazyLoad>
+`;

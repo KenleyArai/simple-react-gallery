@@ -26,7 +26,7 @@ export default class Img extends Component {
 
   render() {
     var { src, srcSet, theme } = { ...this.props };
-    if (src) return <ImgStyle src={src} />;
-    return <ImgStyle srcSet={srcSet} />;
+    if (src) return <ImgStyle theme={theme} src={src} />;
+    return <ImgStyle theme={theme} srcSet={srcSet} />;
   }
 }

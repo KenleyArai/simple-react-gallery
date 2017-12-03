@@ -7,22 +7,21 @@ import renderer from "react-test-renderer";
 import "jest-styled-components";
 configure({ adapter: new Adapter() });
 
-import Img from "containers/Img";
+import LazyImg from "components/LazyImg";
 import testSrc from "../logo-small.svg";
 
-describe("Img", () => {
+describe("LazyImg", () => {
   it("should render without src", () => {
-    const wrapper = shallow(<Img />);
+    const wrapper = shallow(<LazyImg />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it("should render with src", () => {
-    const wrapper = shallow(<Img src={testSrc} />);
+    const wrapper = shallow(<LazyImg src={testSrc} />);
     expect(wrapper).toMatchSnapshot();
   });
-
   it("should render with srcSet", () => {
-    const wrapper = shallow(<Img srcSet={testSrc} />);
+    const wrapper = shallow(<LazyImg srcSet={testSrc} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
