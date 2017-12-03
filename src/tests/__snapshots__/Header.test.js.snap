@@ -5,8 +5,8 @@ exports[`Header should render with children 1`] = `
   theme={
     Object {
       "primary": "#fff",
-      "secondary": "",
-      "tertiary": "",
+      "secondary": "#000",
+      "tertiary": "#444",
     }
   }
 >
@@ -21,8 +21,8 @@ exports[`Header should render without children 1`] = `
   theme={
     Object {
       "primary": "#fff",
-      "secondary": "",
-      "tertiary": "",
+      "secondary": "#000",
+      "tertiary": "#444",
     }
   }
 >
