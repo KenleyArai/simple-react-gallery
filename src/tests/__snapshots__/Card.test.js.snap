@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render with all props 1`] = `
+<styled.div>
+  <LazyImg
+    src=""
+    srcSet="https://kenley.nyc3.digitaloceanspaces.com/images/serial-face/0.jpg"
+    theme={
+      Object {
+        "primary": "",
+        "secondary": "",
+        "tertiary": "",
+      }
+    }
+  />
+</styled.div>
+`;
+
+exports[`Card should render without desc prop 1`] = `
+<styled.div>
+  <LazyImg
+    src=""
+    srcSet="https://kenley.nyc3.digitaloceanspaces.com/images/serial-face/0.jpg"
+    theme={
+      Object {
+        "primary": "",
+        "secondary": "",
+        "tertiary": "",
+      }
+    }
+  />
+</styled.div>
+`;
+
+exports[`Card should render without props 1`] = `
+<styled.div>
+  <LazyImg
+    src=""
+    srcSet=""
+    theme={
+      Object {
+        "primary": "",
+        "secondary": "",
+        "tertiary": "",
+      }
+    }
+  />
+</styled.div>
+`;
