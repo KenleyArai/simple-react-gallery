@@ -8,15 +8,9 @@ export default class Img extends Component {
     src: PropTypes.string,
     srcSet: PropTypes.string
   };
-
-  static defaultProps = {
-    src: "",
-    srcSet: ""
-  };
-
   render() {
     var { src, srcSet } = { ...this.props };
-    if (src) return <ImgStyle src={src} />;
+    if (src != undefined) return <ImgStyle src={src} />;
     return <ImgStyle srcSet={srcSet} />;
   }
 }

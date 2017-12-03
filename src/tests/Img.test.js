@@ -11,7 +11,7 @@ import Img from "containers/Img";
 import testSrc from "../logo-small.svg";
 
 describe("Img", () => {
-  it("should render without src", () => {
+  it("should render without src and srcSet", () => {
     const wrapper = shallow(<Img />);
     expect(wrapper).toMatchSnapshot();
   });

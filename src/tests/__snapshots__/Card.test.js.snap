@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render with all props 1`] = `
+<styled.div
+  theme={
+    Object {
+      "primary": "#fff",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+>
+  <LazyImg
+    src=""
+    srcSet="https://kenley.nyc3.digitaloceanspaces.com/images/serial-face/0.jpg"
+  />
+  <Header>
+    Lorem ipsum dolor sit amet, consectetu.
+  </Header>
+</styled.div>
+`;
+
+exports[`Card should render without desc prop 1`] = `
+<styled.div
+  theme={
+    Object {
+      "primary": "#fff",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+>
+  <LazyImg
+    src=""
+    srcSet="https://kenley.nyc3.digitaloceanspaces.com/images/serial-face/0.jpg"
+  />
+  <Header>
+    Lorem ipsum dolor sit amet, consectetu.
+  </Header>
+</styled.div>
+`;
+
+exports[`Card should render without props 1`] = `
+<styled.div
+  theme={
+    Object {
+      "primary": "#fff",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+>
+  <LazyImg
+    src=""
+    srcSet=""
+  />
+  <Header />
+</styled.div>
+`;
+
+exports[`Card should render without title 1`] = `
+<styled.div
+  theme={
+    Object {
+      "primary": "#fff",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+>
+  <LazyImg
+    src=""
+    srcSet="https://kenley.nyc3.digitaloceanspaces.com/images/serial-face/0.jpg"
+  />
+  <Header />
+</styled.div>
+`;

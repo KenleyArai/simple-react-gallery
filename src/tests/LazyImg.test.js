@@ -11,7 +11,7 @@ import LazyImg from "components/LazyImg";
 import testSrc from "../logo-small.svg";
 
 describe("LazyImg", () => {
-  it("should render without src", () => {
+  it("should render without src and srcSet", () => {
     const wrapper = shallow(<LazyImg />);
     expect(wrapper).toMatchSnapshot();
   });

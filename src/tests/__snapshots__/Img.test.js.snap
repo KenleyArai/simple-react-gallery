@@ -12,8 +12,4 @@ exports[`Img should render with srcSet 1`] = `
 />
 `;
 
-exports[`Img should render without src 1`] = `
-<styled.img
-  srcSet=""
-/>
-`;
+exports[`Img should render without src and srcSet 1`] = `<styled.img />`;
