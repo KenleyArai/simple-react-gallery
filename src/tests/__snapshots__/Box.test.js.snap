@@ -1,14 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Box should render box 1`] = `
+.c0 {
+  background: #fff;
+}
+
 <div
-  className=""
+  className="c0"
 />
 `;
 
-exports[`Box should render with children 1`] = `
+exports[`Box should render when provided a different primary background color 1`] = `
+.c0 {
+  background: #000;
+}
+
 <div
-  className=""
+  className="c0"
+>
+  Child Content
+</div>
+`;
+
+exports[`Box should render with children 1`] = `
+.c0 {
+  background: #fff;
+}
+
+<div
+  className="c0"
+>
+  Child Content
+</div>
+`;
+
+exports[`Box should render with default primary background color 1`] = `
+.c0 {
+  background: #fff;
+}
+
+<div
+  className="c0"
 >
   Child Content
 </div>

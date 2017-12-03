@@ -1,5 +1,5 @@
 const theme = {
-  primary: "",
+  primary: "#fff",
   secondary: "",
   tertiary: ""
 };
