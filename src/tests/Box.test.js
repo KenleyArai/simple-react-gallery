@@ -8,11 +8,16 @@ import "jest-styled-components";
 
 configure({ adapter: new Adapter() });
 
-import Bar from "components/Bar";
+import Box from "components/Box";
 
-describe("Bar", () => {
-  it("should render bar", () => {
-    const wrapper = shallow(<Bar />);
+describe("Box", () => {
+  it("should render box", () => {
+    const wrapper = shallow(<Box />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should render with children", () => {
+    const wrapper = shallow(<Box>Child Content</Box>);
     expect(wrapper).toMatchSnapshot();
   });
 });

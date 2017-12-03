@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box should render box 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Box should render with children 1`] = `
+<div
+  className=""
+>
+  Child Content
+</div>
+`;
