@@ -8,11 +8,13 @@ import "jest-styled-components";
 
 configure({ adapter: new Adapter() });
 
-import Button from "components/Button";
+import Button from "containers/Button";
 
-describe("Bar", () => {
-  it("should render bar", () => {
-    const wrapper = shallow(<Button />);
-    expect(Button).toMatchSnapshot();
+describe("Button", () => {
+  it("should render button", () => {
+    const wrapper = shallow(
+      <Button clickHandler={() => {}}>Test Button</Button>
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 });

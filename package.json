@@ -15,15 +15,16 @@
     "uuid": "^3.1.0"
   },
   "scripts": {
-    "start": "NODE_PATH=src:src/components:src/containers react-scripts start",
-    "build": "NODE_PATH=src:src/components:src/containers react-scripts build",
-    "test": "NODE_PATH=src:src/components:src/containers:src/tests react-scripts test --env=jsdom",
+    "start":
+      "NODE_PATH=src:src/components:src/containers:src/styled react-scripts start",
+    "build":
+      "NODE_PATH=src:src/components:src/containers:src/styled react-scripts build",
+    "test":
+      "NODE_PATH=src:src/components:src/containers:src/tests:src/styled react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "devDependencies": {
     "enzyme-to-json": "^3.2.2",
