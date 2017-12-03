@@ -9,8 +9,16 @@ export default class Button extends Component {
     children: PropTypes.string.isRequired
   };
 
+  static defaultProps = {
+    active: false
+  };
+
   render() {
-    var { clickHandler, children } = { ...this.props };
-    return <ButtonStyle>{children}</ButtonStyle>;
+    var { clickHandler, children, active } = { ...this.props };
+    return (
+      <ButtonStyle onClick={() => clickHandler()} active={active}>
+        {children}
+      </ButtonStyle>
+    );
   }
 }

@@ -17,4 +17,13 @@ describe("Button", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should render active button", () => {
+    const wrapper = shallow(
+      <Button clickHandler={() => {}} active>
+        Test Button
+      </Button>
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });

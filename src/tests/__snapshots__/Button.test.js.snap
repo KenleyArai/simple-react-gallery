@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button should render active button 1`] = `
+<styled.div
+  active={true}
+  onClick={[Function]}
+>
+  Test Button
+</styled.div>
+`;
+
 exports[`Button should render button 1`] = `
-<styled.div>
+<styled.div
+  active={false}
+  onClick={[Function]}
+>
   Test Button
 </styled.div>
 `;
