@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render with children 1`] = `
-<styled.div>
+<styled.div
+  theme={
+    Object {
+      "primary": "#fff",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+>
   <styled.span>
     Test Header
   </styled.span>
@@ -9,7 +17,15 @@ exports[`Header should render with children 1`] = `
 `;
 
 exports[`Header should render without children 1`] = `
-<styled.div>
+<styled.div
+  theme={
+    Object {
+      "primary": "#fff",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+>
   <styled.span />
 </styled.div>
 `;

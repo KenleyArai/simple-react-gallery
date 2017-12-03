@@ -13,7 +13,6 @@ exports[`LazyImg should render with src 1`] = `
 >
   <Img
     src="logo-small.svg"
-    srcSet=""
   />
 </LazyLoad>
 `;
@@ -30,13 +29,12 @@ exports[`LazyImg should render with srcSet 1`] = `
   unmountIfInvisible={false}
 >
   <Img
-    src=""
     srcSet=""
   />
 </LazyLoad>
 `;
 
-exports[`LazyImg should render without src 1`] = `
+exports[`LazyImg should render without src and srcSet 1`] = `
 <LazyLoad
   height={300}
   offset={0}
@@ -48,7 +46,6 @@ exports[`LazyImg should render without src 1`] = `
   unmountIfInvisible={false}
 >
   <Img
-    src=""
     srcSet=""
   />
 </LazyLoad>
