@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Box from "components/Box";
 import LazyImg from "components/LazyImg";
+
 export default class Card extends Component {
   static propTypes = {
     url: PropTypes.string,
