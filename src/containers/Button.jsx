@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 import ButtonStyle from "styled/ButtonStyle";
 
+import theme from "../theme";
+
 export default class Button extends Component {
   static propTypes = {
     clickHandler: PropTypes.func,
@@ -16,11 +18,7 @@ export default class Button extends Component {
 
   static defaultProps = {
     active: false,
-    theme: {
-      primary: "",
-      secondary: "",
-      tertiary: ""
-    },
+    theme: { ...theme },
     children: "Click Me!"
   };
 
