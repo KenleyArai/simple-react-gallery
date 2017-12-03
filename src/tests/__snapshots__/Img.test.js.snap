@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Img should render with src 1`] = `
+<styled.img
+  srcSet="logo-small.svg"
+/>
+`;
+
+exports[`Img should render without 1`] = `
+<styled.img
+  srcSet=""
+/>
+`;
