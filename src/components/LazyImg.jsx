@@ -5,31 +5,28 @@ import PropTypes from "prop-types";
 import Img from "containers/Img";
 
 const LazyImg = ({ src, srcSet, theme }) => {
+  if (src) {
+    return (
+      <Lazyload throttle={500} height={300}>
+        <Img src={src} />
+      </Lazyload>
+    );
+  }
   return (
     <Lazyload throttle={500} height={300}>
-      <Img src={src} />
+      <Img srcSet={src} />
     </Lazyload>
   );
 };
 
 LazyImg.propTypes = {
   src: PropTypes.string,
-  srcSet: PropTypes.string,
-  theme: PropTypes.shape({
-    primary: PropTypes.string,
-    secondary: PropTypes.string,
-    tertiary: PropTypes.string
-  })
+  srcSet: PropTypes.string
 };
 
 LazyImg.defaultProps = {
   src: "",
-  srcSet: "",
-  theme: {
-    primary: "",
-    secondary: "",
-    tertiary: ""
-  }
+  srcSet: ""
 };
 
 export default LazyImg;
