@@ -1,19 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should render active button 1`] = `
-<styled.div
-  active={true}
-  onClick={[Function]}
->
-  Test Button
-</styled.div>
-`;
-
-exports[`Button should render button 1`] = `
+exports[`Button should render 1`] = `
 <styled.div
   active={false}
   onClick={[Function]}
+  theme={
+    Object {
+      "primary": "",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
 >
-  Test Button
+  Click Me!
+</styled.div>
+`;
+
+exports[`Button should render string children 1`] = `
+<styled.div
+  active={false}
+  onClick={[Function]}
+  theme={
+    Object {
+      "primary": "",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+>
+  String Text!
+</styled.div>
+`;
+
+exports[`Button should render when active 1`] = `
+<styled.div
+  active={true}
+  onClick={[Function]}
+  theme={
+    Object {
+      "primary": "",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+>
+  Click Me!
+</styled.div>
+`;
+
+exports[`Button should render when string children and active 1`] = `
+<styled.div
+  active={true}
+  onClick={[Function]}
+  theme={
+    Object {
+      "primary": "",
+      "secondary": "",
+      "tertiary": "",
+    }
+  }
+>
+  Active Text!
 </styled.div>
 `;
