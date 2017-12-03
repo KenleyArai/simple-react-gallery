@@ -14,4 +14,9 @@ describe("Header", () => {
     const wrapper = shallow(<Header />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should render with children", () => {
+    const wrapper = shallow(<Header>Test Header</Header>);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

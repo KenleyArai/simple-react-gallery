@@ -13,6 +13,9 @@ exports[`Card should render with all props 1`] = `
       }
     }
   />
+  <Header>
+    Lorem ipsum dolor sit amet, consectetu.
+  </Header>
 </styled.div>
 `;
 
@@ -29,6 +32,9 @@ exports[`Card should render without desc prop 1`] = `
       }
     }
   />
+  <Header>
+    Lorem ipsum dolor sit amet, consectetu.
+  </Header>
 </styled.div>
 `;
 
@@ -45,5 +51,23 @@ exports[`Card should render without props 1`] = `
       }
     }
   />
+  <Header />
+</styled.div>
+`;
+
+exports[`Card should render without title 1`] = `
+<styled.div>
+  <LazyImg
+    src=""
+    srcSet="https://kenley.nyc3.digitaloceanspaces.com/images/serial-face/0.jpg"
+    theme={
+      Object {
+        "primary": "",
+        "secondary": "",
+        "tertiary": "",
+      }
+    }
+  />
+  <Header />
 </styled.div>
 `;
