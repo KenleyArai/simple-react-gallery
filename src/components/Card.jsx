@@ -13,11 +13,17 @@ export default class Card extends Component {
     desc: PropTypes.string,
     title: PropTypes.string,
     link: PropTypes.string,
-    clickHandler: PropTypes.func
+    clickHandler: PropTypes.func,
+    social_payload: PropTypes.shape({
+      type: PropTypes.oneOf(["github", "linkedin"]).isRequired,
+      url: PropTypes.string.isRequired
+    })
   };
 
   render() {
-    var { url, desc, title, link, clickHandler } = { ...this.props };
+    var { url, desc, title, link, clickHandler, social_payload } = {
+      ...this.props
+    };
     return (
       <Box>
         <LazyImg srcSet={url} />
