@@ -6,7 +6,7 @@ exports[`Button should render 1`] = `
   onClick={[Function]}
   theme={
     Object {
-      "primary": "",
+      "primary": "#fff",
       "secondary": "",
       "tertiary": "",
     }
@@ -22,7 +22,7 @@ exports[`Button should render string children 1`] = `
   onClick={[Function]}
   theme={
     Object {
-      "primary": "",
+      "primary": "#fff",
       "secondary": "",
       "tertiary": "",
     }
@@ -38,7 +38,7 @@ exports[`Button should render when active 1`] = `
   onClick={[Function]}
   theme={
     Object {
-      "primary": "",
+      "primary": "#fff",
       "secondary": "",
       "tertiary": "",
     }
@@ -54,7 +54,7 @@ exports[`Button should render when string children and active 1`] = `
   onClick={[Function]}
   theme={
     Object {
-      "primary": "",
+      "primary": "#fff",
       "secondary": "",
       "tertiary": "",
     }

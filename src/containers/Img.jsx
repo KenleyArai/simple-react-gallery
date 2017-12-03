@@ -6,27 +6,17 @@ import ImgStyle from "ImgStyle";
 export default class Img extends Component {
   static propTypes = {
     src: PropTypes.string,
-    srcSet: PropTypes.string,
-    theme: PropTypes.shape({
-      primary: PropTypes.string,
-      secondary: PropTypes.string,
-      tertiary: PropTypes.string
-    })
+    srcSet: PropTypes.string
   };
 
   static defaultProps = {
     src: "",
-    srcSet: "",
-    theme: {
-      primary: "",
-      secondary: "",
-      tertiary: ""
-    }
+    srcSet: ""
   };
 
   render() {
-    var { src, srcSet, theme } = { ...this.props };
-    if (src) return <ImgStyle theme={theme} src={src} />;
-    return <ImgStyle theme={theme} srcSet={srcSet} />;
+    var { src, srcSet } = { ...this.props };
+    if (src) return <ImgStyle src={src} />;
+    return <ImgStyle srcSet={srcSet} />;
   }
 }

@@ -20,4 +20,18 @@ describe("Box", () => {
     const wrapper = shallow(<Box>Child Content</Box>);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should render with default primary background color", () => {
+    const wrapper = shallow(<Box>Child Content</Box>);
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toHaveStyleRule("background", "#fff");
+  });
+
+  it("should render when provided a different primary background color", () => {
+    const wrapper = shallow(
+      <Box theme={{ primary: "#000" }}>Child Content</Box>
+    );
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toHaveStyleRule("background", "#000");
+  });
 });

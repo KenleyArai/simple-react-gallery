@@ -14,13 +14,6 @@ exports[`LazyImg should render with src 1`] = `
   <Img
     src="logo-small.svg"
     srcSet=""
-    theme={
-      Object {
-        "primary": "",
-        "secondary": "",
-        "tertiary": "",
-      }
-    }
   />
 </LazyLoad>
 `;
@@ -39,13 +32,6 @@ exports[`LazyImg should render with srcSet 1`] = `
   <Img
     src=""
     srcSet=""
-    theme={
-      Object {
-        "primary": "",
-        "secondary": "",
-        "tertiary": "",
-      }
-    }
   />
 </LazyLoad>
 `;
@@ -64,13 +50,6 @@ exports[`LazyImg should render without src 1`] = `
   <Img
     src=""
     srcSet=""
-    theme={
-      Object {
-        "primary": "",
-        "secondary": "",
-        "tertiary": "",
-      }
-    }
   />
 </LazyLoad>
 `;
