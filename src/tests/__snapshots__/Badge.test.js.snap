@@ -8,12 +8,12 @@ exports[`Badge should render blank badge with no props 1`] = `
 
 exports[`Badge should render facebook badge with facebook props 1`] = `
 <styled.div
-  blank={true}
+  facebook={true}
 />
 `;
 
 exports[`Badge should render linkedin badge with linkedin props 1`] = `
 <styled.div
-  blank={true}
+  linkedin={true}
 />
 `;

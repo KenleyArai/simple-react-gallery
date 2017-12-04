@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BadgeStyled should render with a blank background with blank prop 1`] = `
+.c0 {
+  background-image: blank.svg;
+}
+
+<div
+  className="c0"
+  type="blank"
+/>
+`;

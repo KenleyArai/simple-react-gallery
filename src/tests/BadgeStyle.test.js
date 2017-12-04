@@ -12,7 +12,7 @@ import blank from "../images/blank.svg";
 import linkedin from "../images/linkedin.svg";
 import facebook from "../images/facebook.svg";
 
-import { background_helper } from "../styled/BadgeStyle";
+import BadgeStyle, { background_helper } from "../styled/BadgeStyle";
 
 describe("BadgeStyled", () => {
   describe("Helper Functions", () => {
@@ -27,5 +27,10 @@ describe("BadgeStyled", () => {
         expect(background_helper("facebook")).toBe(facebook);
       });
     });
+  });
+
+  it("should render with a blank background with blank prop", () => {
+    const wrapper = shallow(<BadgeStyle type={"blank"} />);
+    expect(wrapper).toMatchSnapshot();
   });
 });

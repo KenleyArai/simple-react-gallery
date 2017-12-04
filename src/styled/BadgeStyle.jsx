@@ -18,7 +18,9 @@ function background_helper(type) {
   return blank;
 }
 
-const BadgeStyle = styled.div``;
+const BadgeStyle = styled.div`
+  background-image: ${props => background_helper(props.type)};
+`;
 
 export { background_helper };
 export default BadgeStyle;
