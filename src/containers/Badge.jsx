@@ -22,8 +22,12 @@ export default class Badge extends Component {
   render() {
     var { type, url } = { ...this.props };
     switch (type) {
+      case "facebook":
+        return <BadgeStyle facebook />;
+      case "linkedin":
+        return <BadgeStyle linkedin />;
       default:
-        return <BadgeStyle blank>?</BadgeStyle>;
+        return <BadgeStyle blank />;
     }
   }
 }
