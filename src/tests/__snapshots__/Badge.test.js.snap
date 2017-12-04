@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge should render blank badge with no props 1`] = `
+<a>
+  <styled.div
+    type="blank"
+  />
+</a>
+`;
+
+exports[`Badge should render facebook badge with facebook props 1`] = `
+<a
+  href="https://facebook.com"
+>
+  <styled.div
+    type="facebook"
+  />
+</a>
+`;
+
+exports[`Badge should render linkedin badge with linkedin props 1`] = `
+<a
+  href="https://linked.in"
+>
+  <styled.div
+    type="linkedin"
+  />
+</a>
+`;
