@@ -16,11 +16,15 @@ describe("Badge", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("should render linkedin badge with linkedin props", () => {
-    const wrapper = shallow(<Badge type={"linkedin"} />);
+    const wrapper = shallow(
+      <Badge url={"https://linked.in"} type={"linkedin"} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
   it("should render facebook badge with facebook props", () => {
-    const wrapper = shallow(<Badge type={"facebook"} />);
+    const wrapper = shallow(
+      <Badge url={"https://facebook.com"} type={"facebook"} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
