@@ -9,9 +9,8 @@ import "jest-styled-components";
 configure({ adapter: new Adapter() });
 
 import Badge from "containers/Badge";
-
 describe("Badge", () => {
-  it("should render without props", () => {
+  it("should render blank badge with no props", () => {
     const wrapper = shallow(<Badge />);
     expect(wrapper).toMatchSnapshot();
   });
