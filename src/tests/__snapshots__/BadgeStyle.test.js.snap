@@ -10,3 +10,25 @@ exports[`BadgeStyled should render with a blank background with blank prop 1`] =
   type="blank"
 />
 `;
+
+exports[`BadgeStyled should render with a facebook background with facebook prop 1`] = `
+.c0 {
+  background-image: facebook.svg;
+}
+
+<div
+  className="c0"
+  type="facebook"
+/>
+`;
+
+exports[`BadgeStyled should render with a linkedin background with linkedin prop 1`] = `
+.c0 {
+  background-image: linkedin.svg;
+}
+
+<div
+  className="c0"
+  type="linkedin"
+/>
+`;

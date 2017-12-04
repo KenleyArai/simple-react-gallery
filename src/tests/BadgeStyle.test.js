@@ -33,4 +33,13 @@ describe("BadgeStyled", () => {
     const wrapper = shallow(<BadgeStyle type={"blank"} />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should render with a linkedin background with linkedin prop", () => {
+    const wrapper = shallow(<BadgeStyle type={"linkedin"} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("should render with a facebook background with facebook prop", () => {
+    const wrapper = shallow(<BadgeStyle type={"facebook"} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
