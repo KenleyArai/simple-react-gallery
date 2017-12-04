@@ -10,6 +10,7 @@ configure({ adapter: new Adapter() });
 
 import blank from "../images/blank.svg";
 import linkedin from "../images/linkedin.svg";
+import facebook from "../images/facebook.svg";
 
 import { background_helper } from "../styled/BadgeStyle";
 
@@ -21,6 +22,9 @@ describe("BadgeStyled", () => {
       });
       it("should return linkedin icon when type is linkedin", () => {
         expect(background_helper("linkedin")).toBe(linkedin);
+      });
+      it("should return facebook icon when type is facebook", () => {
+        expect(background_helper("facebook")).toBe(facebook);
       });
     });
   });
