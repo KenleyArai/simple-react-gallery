@@ -9,13 +9,18 @@ import "jest-styled-components";
 configure({ adapter: new Adapter() });
 
 import blank from "../images/blank.svg";
+import linkedin from "../images/linkedin.svg";
+
 import { background_helper } from "../styled/BadgeStyle";
 
 describe("BadgeStyled", () => {
   describe("Helper Functions", () => {
     describe("background_helper", () => {
-      it("should return blank when type is blank", () => {
+      it("should return blank icon when type is blank", () => {
         expect(background_helper("blank")).toBe(blank);
+      });
+      it("should return linkedin icon when type is linkedin", () => {
+        expect(background_helper("linkedin")).toBe(linkedin);
       });
     });
   });
